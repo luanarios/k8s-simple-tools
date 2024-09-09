@@ -39,7 +39,7 @@ else
             echo "$YAML" | kubectl neat > $resource_name.yaml
             echo "--- Exported YAML: $resource_name.yaml" 
         else
-            exit 4
+            exit 5
         fi
     done
 fi
