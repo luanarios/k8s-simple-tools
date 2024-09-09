@@ -3,9 +3,6 @@
 csv_file="teste.csv"
 
 awk 'NR > 1 {print}' "$csv_file" | while IFS=, read -r context namespace resource_type resource_name; do
-    if [[ "$namespace" = "namespace" ]]; then
-        continue
-    fi
     YAML=$(kubectl neat get -- -n $namespace $resource_type $resource_name --context $context -o yaml)
     if [ $? -eq 0 ]; then
         echo "$YAML" | kubectl neat > $resource_name.yaml
