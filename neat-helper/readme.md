@@ -31,7 +31,7 @@ Then the terminal will ask for input data (context, namespace, resource type and
 
 ### Importing CSV
 
-This method is invoked by passing a csv file as argument, it's useful for multiple manifests.
+This method is invoked by passing a csv file as argument, it's useful when exporting multiple manifests.
 
 ```bash
 ./neat-helper/neat-helper.sh sample.csv
